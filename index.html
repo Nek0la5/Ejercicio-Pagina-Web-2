@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Gráficas en Dashboards Administrativos</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="dashboard-container">
+
+        <!-- Barra Lateral de Navegación -->
+        <aside class="sidebar" role="navigation" aria-label="Menú de tipos de gráficas">
+        <div class="brand">
+            <span class="css-icon icon-brand" aria-hidden="true"></span>
+            <span>ChartGuide</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#introduccion" class="nav-item">
+            <span class="css-icon icon-book" aria-hidden="true"></span>
+            <span>Introducción</span>
+            </a>
+            <a href="#barras" class="nav-item">
+            <span class="css-icon icon-bar" aria-hidden="true"></span>
+            <span>Barras</span>
+            </a>
+            <a href="#lineas" class="nav-item">
+            <span class="css-icon icon-line" aria-hidden="true"></span>
+            <span>Líneas y Área</span>
+            </a>
+            <a href="#circular" class="nav-item">
+            <span class="css-icon icon-pie" aria-hidden="true"></span>
+            <span>Circular / Anillo</span>
+            </a>
+            <a href="#comparativa" class="nav-item">
+            <span class="css-icon icon-table" aria-hidden="true"></span>
+            <span>Comparativa</span>
+            </a>
+        </nav>
+        </aside>
+
+        <!-- Encabezado Superior -->
+        <header class="header" role="banner">
+        <div class="header-title">
+            <h1>Guía de Visualización de Datos para Gestión Administrativa</h1>
+        </div>
+        <div class="header-actions">
+            <a href="#comparativa" class="btn-primary">Ver Tabla Comparativa</a>
+        </div>
+        </header>
+
+        <!-- Área Principal con las Secciones Explicativas -->
+        <main class="main-content" role="main">
+        
+        <!-- Introducción / Tarjetas KPI Resumen -->
+        <section id="introduccion" class="kpi-grid" aria-label="Principios fundamentales">
+            <article class="card kpi-card">
+            <div class="kpi-info">
+                <span class="kpi-title">Regla #1</span>
+                <strong class="kpi-value">Claridad</strong>
+                <p class="kpi-desc">Elegir el gráfico según la pregunta del negocio, no por estética.</p>
+            </div>
+            <div class="kpi-icon-wrapper">
+                <span class="css-icon icon-eye" aria-hidden="true"></span>
+            </div>
+            </article>
+
+            <article class="card kpi-card">
+            <div class="kpi-info">
+                <span class="kpi-title">Regla #2</span>
+                <strong class="kpi-value">Simplicidad</strong>
+                <p class="kpi-desc">Reducir el ruido visual y destacar solo métricas clave.</p>
+            </div>
+            <div class="kpi-icon-wrapper">
+                <span class="css-icon icon-filter" aria-hidden="true"></span>
+            </div>
+            </article>
+
+            <article class="card kpi-card">
+            <div class="kpi-info">
+                <span class="kpi-title">Regla #3</span>
+                <strong class="kpi-value">Contexto</strong>
+                <p class="kpi-desc">Acompañar todo gráfico con ejes, leyendas y comparativos.</p>
+            </div>
+            <div class="kpi-icon-wrapper">
+                <span class="css-icon icon-compass" aria-hidden="true"></span>
+            </div>
+            </article>
+        </section>
+
+        <!-- Gráfico de Barras -->
+        <section id="barras" class="card section-card">
+            <div class="card-header">
+            <h2>1. Gráficas de Barras y Columnas</h2>
+            <span class="badge usage-badge">Comparación de Categorías</span>
+            </div>
+            <div class="content-split">
+            <div class="text-block">
+                <p><strong>¿Cuándo usarla?</strong> Es la mejor opción para comparar montos discretos entre diferentes categorías fijas (ej. ventas por región, gastos por departamento).</p>
+                <ul>
+                <li><strong>Eje X:</strong> Categorías cualitativas.</li>
+                <li><strong>Eje Y:</strong> Valores numéricos continuos.</li>
+                <li><strong>Buenas prácticas:</strong> Ordenar las barras de mayor a menor para facilitar la lectura inmediata.</li>
+                </ul>
+            </div>
+            <div class="visual-block">
+                <!-- Gráfico de Barras CSS Puro -->
+                <div class="css-chart-bar" aria-label="Gráfico de barras de ejemplo">
+                <div class="bar" style="--size: 80%;"></div>
+                <div class="bar" style="--size: 50%;"></div>
+                <div class="bar" style="--size: 90%;"></div>
+                <div class="bar" style="--size: 35%;"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Gráfico de Líneas -->
+        <section id="lineas" class="card section-card">
+            <div class="card-header">
+            <h2>2. Gráficas de Líneas y Tendencia</h2>
+            <span class="badge usage-badge">Evolución en el Tiempo</span>
+            </div>
+            <div class="content-split">
+            <div class="text-block">
+                <p><strong>¿Cuándo usarla?</strong> Ideal para mostrar la evolución continua de métricas operativas o financieras a lo largo del tiempo (días, meses, trimestres).</p>
+                <ul>
+                <li><strong>Eje Horizontal:</strong> Escala temporal.</li>
+                <li><strong>Ventaja clave:</strong> Revela patrones, estacionalidad y tendencias de crecimiento o caída.</li>
+                <li><strong>Recomendación:</strong> No comparar más de 4 líneas simultáneas para evitar saturación.</li>
+                </ul>
+            </div>
+            <div class="visual-block">
+                <!-- Gráfico de Líneas CSS Puro -->
+                <div class="css-chart-line" aria-label="Gráfico de líneas de ejemplo">
+                <div class="line-trend"></div>
+                <div class="point p1"></div>
+                <div class="point p2"></div>
+                <div class="point p3"></div>
+                <div class="point p4"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Gráfico Circular / Anillo -->
+        <section id="circular" class="card section-card">
+            <div class="card-header">
+            <h2>3. Gráficas Circulares y Anillos (Donut)</h2>
+            <span class="badge usage-badge">Proporción y Composición</span>
+            </div>
+            <div class="content-split">
+            <div class="text-block">
+                <p><strong>¿Cuándo usarla?</strong> Para visualizar cómo se divide un todo en partes porcentuales (ej. participación de mercado, distribución presupuestaria).</p>
+                <ul>
+                <li><strong>Suma total:</strong> Las partes deben sumar exactamente el 100%.</li>
+                <li><strong>Límite:</strong> Usar como máximo entre 4 y 6 segmentos.</li>
+                <li><strong>Preferencia:</strong> Los gráficos de anillo permiten ubicar un dato relevante o totalizador en el centro vacío.</li>
+                </ul>
+            </div>
+            <div class="visual-block">
+                <!-- Gráfico de Anillo CSS Puro -->
+                <div class="css-chart-donut" aria-label="Gráfico de anillo de ejemplo">
+                <div class="donut-center">100%</div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Tabla Comparativa -->
+        <section id="comparativa" class="card table-container" aria-label="Tabla comparativa de usos">
+            <div class="card-header">
+            <h2>Resumen de Selección por Caso de Uso</h2>
+            </div>
+            <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Tipo de Gráfica</th>
+                    <th scope="col">Objetivo Principal</th>
+                    <th scope="col">Caso Típico en Salud / Administración</th>
+                    <th scope="col">Complejidad Visual</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Barras / Columnas</strong></td>
+                    <td>Comparar valores fijos</td>
+                    <td>Nivel de ocupación de camas por sede</td>
+                    <td>Baja</td>
+                </tr>
+                <tr>
+                    <td><strong>Líneas</strong></td>
+                    <td>Analizar tendencias temporales</td>
+                    <td>Seguimiento mensual de incidentes reportados</td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <td><strong>Anillo / Pie</strong></td>
+                    <td>Composición porcentual</td>
+                    <td>Distribución presupuestal por área operacional</td>
+                    <td>Baja</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+        </main>
+
+        <!-- Footer Informativo -->
+        <footer class="footer" role="contentinfo">
+        <p>&copy; 2026 Guía de Diseño y Analítica - Sistema de Gestión Administrativa.</p>
+        <p>Construido con HTML5 & CSS3</p>
+        </footer>
+
+    </div>
+</body>
+</html>
